@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://catalogomotos.web.app")
 @RestController
 @RequestMapping("/motocicletas")
 public class MotocicletaController {

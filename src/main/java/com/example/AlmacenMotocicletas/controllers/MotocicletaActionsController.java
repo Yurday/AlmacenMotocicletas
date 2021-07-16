@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("https://catalogomotos.web.app")
+@CrossOrigin(origins = "https://catalogomotos.web.app")
 @RestController
 @RequestMapping("/motocicletas")
 public class MotocicletaActionsController {
