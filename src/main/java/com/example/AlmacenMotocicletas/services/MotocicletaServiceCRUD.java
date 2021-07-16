@@ -1,6 +1,7 @@
 package com.example.AlmacenMotocicletas.services;
 
 import com.example.AlmacenMotocicletas.DTOs.MotocicletaDTO;
+import com.example.AlmacenMotocicletas.DTOs.RespuestaDTO;
 import com.example.AlmacenMotocicletas.collections.Motocicleta;
 import com.example.AlmacenMotocicletas.mappers.MotocicletaMapper;
 import com.example.AlmacenMotocicletas.repositories.MotocicletaRepository;
@@ -29,9 +30,12 @@ public class MotocicletaServiceCRUD {
     }
 
     //Create motocicleta
-    public MotocicletaDTO create(MotocicletaDTO motocicletaDTO){
+    public RespuestaDTO create(MotocicletaDTO motocicletaDTO){
+        RespuestaDTO respuestaDTO = new RespuestaDTO();
         Motocicleta motocicleta = mapper.fromDTO(motocicletaDTO);
-        return mapper.fromCollection(motocicletaRepository.save(motocicleta));
+        mapper.fromCollection(motocicletaRepository.save(motocicleta));
+        respuestaDTO.setMensaje("Motocicleta creada con éxito");
+        return respuestaDTO;
     }
 
     //Modify motocicleta

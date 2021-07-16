@@ -1,14 +1,27 @@
 package com.example.AlmacenMotocicletas.DTOs;
 
+import com.mongodb.lang.NonNull;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.constraints.NotBlank;
+
+@Validated
 public class MotocicletaDTO {
 
+    @NotBlank
     private String id;
+    @NotBlank
     private String marca;
+    @NotBlank
     private String linea;
+    @NotBlank
     private String modelo;
+    @NotBlank
     private String cilindraje;
+    @NotBlank
     private String valor;
+    @NotBlank
     private String color;
+    @NotBlank
     private String imagen;
 
     //Builder
